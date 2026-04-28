@@ -315,25 +315,7 @@ async def on_guild_join(guild):
 async def on_ready():
     print(f"We are ready to go in, {bot.user.name}")
 
-@bot.event
-async def on_message(message):
-    if get_channel_id(message.guild.id) != None:
-        Target_Channel = await bot.fetch_channel(get_channel_id(message.guild.id))
-    else:
-        Target_Channel = None
-
-    if message.author == bot.user:
-        return
-    
-    await bot.process_commands(message) # let commands run first
-
-    if message.content.startswith('!'): # prevents commands from reaching code
-        return
-
-    if Target_Channel is None or message.channel.id != Target_Channel.id: # only restrict normal messages
-        print('not right channel')
-        return
-    
+async def processURL(message):
     URL = grabLink(message.content)
 
     if any(x in URL for x in ["www.instagram.com/reel", "www.instagram.com/p/"]):
@@ -818,6 +800,28 @@ async def on_message(message):
             if infile and infile.exists():
                 infile.unlink(missing_ok=True)
                 print("Deleted infile")
+
+
+@bot.event
+async def on_message(message):
+    if get_channel_id(message.guild.id) != None:
+        Target_Channel = await bot.fetch_channel(get_channel_id(message.guild.id))
+    else:
+        Target_Channel = None
+
+    if message.author == bot.user:
+        return
+    
+    await bot.process_commands(message) # let commands run first
+
+    if message.content.startswith('!'): # prevents commands from reaching code
+        return
+
+    if Target_Channel is None or message.channel.id != Target_Channel.id: # only restrict normal messages
+        print('not right channel')
+        return
+    
+    await processURL(message)
 
 
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
