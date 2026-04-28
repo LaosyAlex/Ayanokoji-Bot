@@ -801,6 +801,22 @@ async def processURL(message):
                 infile.unlink(missing_ok=True)
                 print("Deleted infile")
 
+@bot.command()
+async def retry(ctx):
+    if get_channel_id(ctx.guild.id) != None:
+        Target_Channel = await bot.fetch_channel(get_channel_id(ctx.guild.id))
+    else:
+        Target_Channel = None
+
+    if Target_Channel is None or ctx.channel.id != Target_Channel.id or ctx.message.reference is None:
+        await ctx.message.reply("Reply to a message in the right channel to retry.")
+        return
+    
+    replied_message = await ctx.channel.fetch_message(
+        ctx.message.reference.message_id
+    )
+
+    await processURL(replied_message)
 
 @bot.event
 async def on_message(message):
