@@ -671,12 +671,12 @@ async def processURL(message):
                         await message.reply(postText, file=discord.File(outfile))
                 except:
                     print("Def not video")
+                    raise Exception("Most likely request was blocked")
 
                 print("reddit not a category")
                 with open("reddit_debug.json", "w", encoding="utf-8") as f:
                     json.dump(data, f, indent=2, ensure_ascii=False)
                 
-                raise Exception("Most likely request was blocked")
         except Exception as e:
             print("reddit exception")
             user = await bot.fetch_user(Firedownz_ID)
