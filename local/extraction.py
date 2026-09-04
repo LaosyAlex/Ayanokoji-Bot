@@ -16,6 +16,11 @@ class Extract:
     attachments = []
 
     #protected
+    @property
+    @abstractmethod
+    def _website(self):
+        pass
+
     @abstractmethod
     def _find_type():
         pass
