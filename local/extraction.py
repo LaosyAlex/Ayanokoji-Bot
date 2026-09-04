@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from enum import Enum
 import os
 import compression
+import utils
 
 class Extract:
     #private
@@ -37,6 +38,19 @@ class Extract:
         pass
 
     def compress(self):
-        pass
+        compression.text(self.text)
+
+        for index, address in self.attachments:
+            format = utils.fileType(address)
+
+            match format:
+                case "image":
+                    self.attachments[index] = compression.image(address)
+                case "video":
+                    self.attachments[index] = compression.video(address)
+                case "gif":
+                    self.attachments[index] = compression.gif(address)
+                case _:
+                    print("Unknown file type")
 
     
