@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from enum import Enum
 import os
+import compression
 
 class Extract:
     #private

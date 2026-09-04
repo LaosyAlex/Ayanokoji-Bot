@@ -1,10 +1,10 @@
 import subprocess
 
-async def video():
+def video():
     pass
 
-async def image():
+def image():
     pass
 
-async def text():
+def text():
     pass
