@@ -12,8 +12,10 @@ class Extract:
         IMAGE = 2
         GALLERY = 3
 
-    text = []
-    attachments = []
+    __downloads = []
+
+    __text = []
+    __attachments = []
 
     #protected
     @property
@@ -34,7 +36,11 @@ class Extract:
         self.type = self._find_type()
 
     def __del__(self):
-        for address in self.attachments:
+        for address in self.__downloads:
+            if os.path.exists(address):
+                os.remove(address)
+
+        for address in self.__attachments:
             if os.path.exists(address):
                 os.remove(address)
 
@@ -43,18 +49,18 @@ class Extract:
         pass
 
     def compress(self):
-        compression.text(self.text)
+        compression.text(self.__text)
 
-        for index, address in self.attachments:
+        for address in self.__downloads:
             format = utils.fileType(address)
 
             match format:
                 case "image":
-                    self.attachments[index] = compression.image(address)
+                    self.__attachments.append(compression.image(address))
                 case "video":
-                    self.attachments[index] = compression.video(address)
+                    self.__attachments.append(compression.video(address))
                 case "gif":
-                    self.attachments[index] = compression.gif(address)
+                    self.__attachments.append(compression.gif(address))
                 case _:
                     print("Unknown file type")
 

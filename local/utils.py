@@ -1,5 +1,7 @@
 import re
 
+MAX_BYTES = 19 * (1024 ** 2)
+
 __imageTypes = ["jpg", "jpeg", "png", "bmp", "tiff", "tif", "webp", "svg", "ico", "heic", "heif", "avif"]
 __gifTypes = ["gif"]
 __videoTypes = ["mp4", "mkv", "mov", "avi", "webm", "flv", "wmv", "m4v", "mpeg", "mpg", "3gp", "ts", "mts", "m2ts"]
