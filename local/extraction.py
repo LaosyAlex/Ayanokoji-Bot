@@ -17,6 +17,22 @@ class Extract:
     __text = []
     __attachments = []
 
+    def __compress(self):
+        compression.text(self.__text)
+
+        for path in self.__downloads:
+            format = utils.fileType(path)
+
+            match format:
+                case "image":
+                    self.__attachments.append(compression.image(path))
+                case "video":
+                    self.__attachments.append(compression.video(path))
+                case "gif":
+                    self.__attachments.append(compression.gif(path))
+                case _:
+                    print("Unknown file type")
+
     #protected
     @property
     @abstractmethod
@@ -30,38 +46,30 @@ class Extract:
     def _get_type(self):
         self.type
 
+    def _append_download(self, path):
+        self.__downloads.append(path)
+
+    @abstractmethod
+    def _extract(self):
+        pass
+
     #public
     def __init__(self, url):
         self.url = url
         self.type = self._find_type()
 
     def __del__(self):
-        for address in self.__downloads:
-            if os.path.exists(address):
-                os.remove(address)
+        for path in self.__downloads:
+            if os.path.exists(path):
+                os.remove(path)
 
-        for address in self.__attachments:
-            if os.path.exists(address):
-                os.remove(address)
+        for path in self.__attachments:
+            if os.path.exists(path):
+                os.remove(path)
 
-    @abstractmethod
-    def extract(self):
-        pass
+    def process(self):
+        self._extract()
+        self.__compress()
 
-    def compress(self):
-        compression.text(self.__text)
-
-        for address in self.__downloads:
-            format = utils.fileType(address)
-
-            match format:
-                case "image":
-                    self.__attachments.append(compression.image(address))
-                case "video":
-                    self.__attachments.append(compression.video(address))
-                case "gif":
-                    self.__attachments.append(compression.gif(address))
-                case _:
-                    print("Unknown file type")
-
+        return self.__text, self.__attachments
     

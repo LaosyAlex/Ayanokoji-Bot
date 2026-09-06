@@ -2,9 +2,19 @@ from PIL import Image
 import os
 from utils import MAX_BYTES
 from pathlib import Path
+import asyncio
 
-def video():
+def video(infile):
     pass
+    '''if os.path.getsize(infile) < MAX_BYTES:
+        return infile
+    else:
+        cmd_ffprobe = [
+            "ffprobe",
+            "-v", "error",
+            "-show_entries", "format=duration : stream=width,height"
+        ]
+    '''
 
 def image(infile):
     if os.path.getsize(infile) < MAX_BYTES:
@@ -40,6 +50,6 @@ def text(textList):
 
     while len(text) > 1900:
         textList.append(text[0:1900])
-        text = text[1900:]
+        text = text[1900:] + "..."
 
     textList.append(text)
