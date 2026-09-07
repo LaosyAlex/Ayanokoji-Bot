@@ -6,7 +6,7 @@ import asyncio
 import subprocess
 import json
 
-def __video_Compression_Calc(bitrate, width, height, FPS):
+def __video_Compression_Calc(total_bitrate, width, height, FPS) -> tuple[float, float, int, float]:
     pass
 
 async def __get_video_info(path):
@@ -37,13 +37,41 @@ async def __get_video_info(path):
 
     return duration, width, height, FPS
 
+async def __compress_video(infile, outfile, audio_bitrate, video_bitrate, height, FPS):
+    cmd = [
+        "ffmpeg",
+        "-y", 
+        "-i", str(infile),
+        "-vf", f"scale=-2:{height}",
+        "-r", FPS,
+        "-c:v", "libx264",
+        "-b:v", video_bitrate,
+        "-c:a", "aac",
+        "-b:a", audio_bitrate,
+        str(outfile)
+    ]
 
+    proc = await asyncio.create_subprocess_exec(
+        *cmd,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.PIPE
+    )
+
+    _, stderr = await proc.communicate() 
 
 def video(infile):
     if os.path.getsize(infile) < MAX_BYTES:
         return infile
     else:
         outfile = Path(infile).with_stem(Path(infile).stem + "_compressed")
+
+        duration, width, height, FPS = asyncio.run(__get_video_info(infile))
+        total_bitrate = MAX_BYTES
+
+        audio_bitrate, video_bitrate, height, FPS = __video_Compression_Calc(total_bitrate, width, height, FPS)
+        asyncio.run(__compress_video(infile, outfile, audio_bitrate, video_bitrate, height, FPS))
+
+
 
 
 def image(infile):
