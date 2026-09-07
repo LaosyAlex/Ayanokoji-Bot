@@ -3,18 +3,48 @@ import os
 from utils import MAX_BYTES
 from pathlib import Path
 import asyncio
+import subprocess
+import json
+
+def __video_Compression_Calc(bitrate, width, height, FPS):
+    pass
+
+async def __get_video_info(path):
+    cmd = [
+        "ffprobe",
+        "-v", "error",
+        "-select_streams", "v:0",
+        "-show_entries", "format=duration : stream=width,height,avg_frame_rate",
+        "-of", "json",
+        str(path)
+    ]
+
+    proc = await asyncio.create_subprocess_exec(
+        *cmd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
+
+    stdout, stderr = await proc.communicate()
+    data = json.loads(stdout.decode())
+
+    duration = float(data["format"]["duration"])
+    width = int(data["streams"][0]["width"])
+    height = int(data["streams"][0]["height"])
+
+    num, den = data["streams"][0]["avg_frame_rate"].split("/")
+    FPS = int(num) / int(den)
+
+    return duration, width, height, FPS
+
+
 
 def video(infile):
-    pass
-    '''if os.path.getsize(infile) < MAX_BYTES:
+    if os.path.getsize(infile) < MAX_BYTES:
         return infile
     else:
-        cmd_ffprobe = [
-            "ffprobe",
-            "-v", "error",
-            "-show_entries", "format=duration : stream=width,height"
-        ]
-    '''
+        outfile = Path(infile).with_stem(Path(infile).stem + "_compressed")
+
 
 def image(infile):
     if os.path.getsize(infile) < MAX_BYTES:
