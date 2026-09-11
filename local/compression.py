@@ -8,14 +8,37 @@ import json
 import re
 
 def __video_Compression_Calc(total_bitrate, width, height, FPS) -> tuple[float, float, int, float]:
-    pass
+    #return audio_bitrate, video_bitrate, height, FPS
+    
+    #audio: 256k, 128k, 64k, 32k, 16k, 8k....
+
+    #Formula BPPPPF = video_bitrate / (width * height * FPS)
+
+    audio_bitrate = total_bitrate * 0.12
+    video_bitrate = total_bitrate - audio_bitrate
+
+    new_FPS = FPS
+
+    while True:
+        BPPPF = video_bitrate / (width * height * new_FPS)
+
+        if BPPPF > 0.08:
+            return audio_bitrate, video_bitrate, height, new_FPS
+        elif new_FPS < 5:
+            width //= 2
+            width -= width % 2
+            height //= 2
+            height -= height % 2
+            new_FPS = FPS
+        else:
+            new_FPS -= 1
 
 async def __get_video_info(path):
     cmd = [
         "ffprobe",
         "-v", "error",
         "-select_streams", "v:0",
-        "-show_entries", "format=duration : stream=width,height,avg_frame_rate",
+        "-show_entries", "format=duration:stream=width,height,avg_frame_rate",
         "-of", "json",
         str(path)
     ]
@@ -44,11 +67,11 @@ async def __compress_video(infile, outfile, audio_bitrate, video_bitrate, height
         "-y", 
         "-i", str(infile),
         "-vf", f"scale=-2:{height}",
-        "-r", FPS,
+        "-r", str(FPS),
         "-c:v", "libx264",
-        "-b:v", video_bitrate,
+        "-b:v", str(video_bitrate),
         "-c:a", "aac",
-        "-b:a", audio_bitrate,
+        "-b:a", str(audio_bitrate),
         str(outfile)
     ]
 
@@ -60,11 +83,13 @@ async def __compress_video(infile, outfile, audio_bitrate, video_bitrate, height
 
     _, stderr = await proc.communicate() 
 
+    print(stderr.decode())
+
 def video(infile):
     if os.path.getsize(infile) < MAX_BYTES:
         return infile
     else:
-        outfile = Path(infile).with_stem(Path(infile).stem + "_compressed")
+        outfile = Path(infile).with_stem(Path(infile).stem + "_compressed").with_suffix(".mp4")
 
         duration, width, height, FPS = asyncio.run(__get_video_info(infile))
         total_bitrate = MAX_BYTES * 8 / duration

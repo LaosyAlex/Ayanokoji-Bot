@@ -1,4 +1,3 @@
 import compression
-import asyncio
 
-compression.gif("C:\\Users\\phomm\\Downloads\\anime_girl_beach_walk_50MiB.gif")
+compression.video("C:\\Users\\phomm\\Downloads\\Last To Leave Mansion, Keeps It [Af6i6ChAVTw].webm")
