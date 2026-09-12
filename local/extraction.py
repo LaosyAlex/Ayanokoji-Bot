@@ -46,8 +46,9 @@ class Extract(ABC):
 
     def _get_type(self):
         self.type
-
     '''
+    def _set_text(self, text):
+        pass
 
     def _append_download(self, path):
         self.__downloads.append(path)
