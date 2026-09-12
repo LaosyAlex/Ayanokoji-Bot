@@ -14,7 +14,7 @@ def __video_Compression_Calc(total_bitrate, width, height, FPS) -> tuple[float, 
 
     #Formula BPPPPF = video_bitrate / (width * height * FPS)
 
-    audio_bitrate = total_bitrate * 0.12
+    audio_bitrate = total_bitrate * 0.12 #change this to bitrarte brackets with floor 16k
     video_bitrate = total_bitrate - audio_bitrate
 
     new_FPS = FPS

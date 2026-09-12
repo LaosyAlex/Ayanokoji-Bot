@@ -4,7 +4,7 @@ import os
 import compression
 import utils
 
-class Extract:
+class Extract(ABC):
     #private
     class __Type(Enum):
         UNKNOWN = 0
@@ -34,6 +34,7 @@ class Extract:
                     print("Unknown file type")
 
     #protected
+    '''
     @property
     @abstractmethod
     def _website(self):
@@ -46,6 +47,8 @@ class Extract:
     def _get_type(self):
         self.type
 
+    '''
+
     def _append_download(self, path):
         self.__downloads.append(path)
 
@@ -56,7 +59,7 @@ class Extract:
     #public
     def __init__(self, url):
         self.url = url
-        self.type = self._find_type()
+        #self.type = self._find_type()
 
     def __del__(self):
         for path in self.__downloads:
