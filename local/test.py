@@ -1,4 +1,7 @@
-import compression
+from youtube import Youtube
 import asyncio
 
-compression.gif("C:\\Users\\phomm\\Downloads\\anime_girl_beach_walk_50MiB.gif")
+test = Youtube(r"https://www.youtube.com/watch?v=p0XXK50weFU")
+test.process()
+
+             
