@@ -1,0 +1,958 @@
+[
+  [
+    2,
+    {
+      "all_awardings": [],
+      "allow_live_comments": false,
+      "approved_at_utc": null,
+      "approved_by": null,
+      "archived": false,
+      "author": "KingWilliamVI",
+      "author_flair_background_color": null,
+      "author_flair_css_class": null,
+      "author_flair_richtext": [],
+      "author_flair_template_id": null,
+      "author_flair_text": null,
+      "author_flair_text_color": null,
+      "author_flair_type": "text",
+      "author_fullname": "t2_i1toold",
+      "author_is_blocked": false,
+      "author_patreon_flair": false,
+      "author_premium": false,
+      "awarders": [],
+      "banned_at_utc": null,
+      "banned_by": null,
+      "can_gild": false,
+      "can_mod_post": false,
+      "category": "reddit",
+      "clicked": false,
+      "comment": null,
+      "content_categories": null,
+      "contest_mode": false,
+      "created": 1791793788.0,
+      "created_utc": 1791793788.0,
+      "date": "2026-10-12 08:29:48",
+      "discussion_type": null,
+      "distinguished": null,
+      "domain": "reddit.com",
+      "downs": 0,
+      "edited": false,
+      "gallery_data": {
+        "items": [
+          {
+            "id": 1068860037,
+            "is_deleted": false,
+            "media_id": "3qmybl4vyzuh1"
+          },
+          {
+            "id": 1068860038,
+            "is_deleted": false,
+            "media_id": "bv544l4vyzuh1"
+          },
+          {
+            "id": 1068860039,
+            "is_deleted": false,
+            "media_id": "wnsifk4vyzuh1"
+          }
+        ]
+      },
+      "gilded": 0,
+      "gildings": {},
+      "hidden": false,
+      "hide_score": false,
+      "id": "1x3wfr5",
+      "is_created_from_ads_ui": false,
+      "is_crosspostable": true,
+      "is_gallery": true,
+      "is_meta": false,
+      "is_original_content": false,
+      "is_reddit_media_domain": false,
+      "is_robot_indexable": true,
+      "is_self": false,
+      "is_video": false,
+      "likes": null,
+      "link_flair_background_color": "#014980",
+      "link_flair_css_class": "",
+      "link_flair_richtext": [],
+      "link_flair_template_id": "ab87c4e8-0ad3-11ef-9ca1-1e0cbb8e359d",
+      "link_flair_text": "Lore",
+      "link_flair_text_color": "light",
+      "link_flair_type": "text",
+      "locked": false,
+      "media": null,
+      "media_embed": {},
+      "media_metadata": {
+        "3qmybl4vyzuh1": {
+          "e": "Image",
+          "id": "3qmybl4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=23ff992391071e2458dcdc742c2c57fb0e9a6037",
+              "x": 108,
+              "y": 61
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=b5bf7bc5cdd02bf68ff3f5055da33327668046b6",
+              "x": 216,
+              "y": 122
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=31d91b6dd7b89ffa0adad1b999c21af96a07fee1",
+              "x": 320,
+              "y": 180
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=bad059419dabbc4d143bbdf7addeedf9b963948e",
+              "x": 640,
+              "y": 361
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=750&format=pjpg&auto=webp&s=286bf9390e167f41386f79822ebde6d5406c0106",
+            "x": 750,
+            "y": 424
+          },
+          "status": "valid"
+        },
+        "bv544l4vyzuh1": {
+          "e": "Image",
+          "id": "bv544l4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=214a4f79549122858ac2a0912b8fa867381c7701",
+              "x": 108,
+              "y": 60
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=d1bb0c2aedc38bb2564813f04e1ef3be285146cb",
+              "x": 216,
+              "y": 120
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=cf1f16685c25a09d995141d0e1b0854eaf134614",
+              "x": 320,
+              "y": 177
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=1730dfb996b345e15744b975115c2e685c2c512f",
+              "x": 640,
+              "y": 355
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=750&format=pjpg&auto=webp&s=77add39a076beb83d65c0b96592a4ecb1cedb6d5",
+            "x": 750,
+            "y": 417
+          },
+          "status": "valid"
+        },
+        "wnsifk4vyzuh1": {
+          "e": "Image",
+          "id": "wnsifk4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=62352e2e7cd25d59f44e5c2bd1d4e27000b494ed",
+              "x": 108,
+              "y": 91
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=6ec91c87e28e2299a99efbb945bebcf183ea0ae5",
+              "x": 216,
+              "y": 183
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=aa50d753cd1f43c3dec6df4e14c7b85f5d2a35d4",
+              "x": 320,
+              "y": 271
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=0520c8dd4518ac1e1534cab5f94be3146429926d",
+              "x": 640,
+              "y": 543
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=641&format=pjpg&auto=webp&s=3e210b3edb3cbad1a052d0ae704ea1b08d1395b4",
+            "x": 641,
+            "y": 544
+          },
+          "status": "valid"
+        }
+      },
+      "media_only": false,
+      "mod_note": null,
+      "mod_reason_by": null,
+      "mod_reason_title": null,
+      "mod_reports": [],
+      "name": "t3_1x3wfr5",
+      "no_follow": false,
+      "num_comments": 1190,
+      "num_crossposts": 0,
+      "num_duplicates": 0,
+      "num_reports": null,
+      "over_18": false,
+      "permalink": "/r/TopCharacterTropes/comments/1x3wfr5/scary_animal_scenes_that_becomes_less_scary_the/",
+      "pinned": false,
+      "pwls": 6,
+      "quarantine": false,
+      "removal_reason": null,
+      "removed_by": null,
+      "removed_by_category": null,
+      "report_reasons": null,
+      "saved": false,
+      "score": 8410,
+      "secure_media": null,
+      "secure_media_embed": {},
+      "selftext": "In Dr No James Bond\u2019s enemies tries to kill him by releasing a spider into his room. That spider is a Tarantula one of the more calmer Spiders species whose bite is not much worse than a bee sting. Also spiders in general don\u2019t deliberately bite humans. I find this example particularly unintentionally funny because if you have no knowledge of spiders this scene is a scary assassin attempt but if you do it comes across more like Bond\u2019s enemies were pranking him. \n\nIn the movie \u201cHoles\u201d supposedly dangerous \u201cyellow spotted\u201d lizards are played by bearded dragons that IRL are non-venomous and unable to seriously harm humans with their bite and are know to be pretty calm and docile.\n\nIn Raiders of the Lost Ark with the ironic exception of the cobra used in this shot most of the supposed dangerous snakes in this scene are either non-venomous snakes or legless lizards.",
+      "selftext_html": "<!-- SC_OFF --><div class=\"md\"><p>In Dr No James Bond\u2019s enemies tries to kill him by releasing a spider into his room. That spider is a Tarantula one of the more calmer Spiders species whose bite is not much worse than a bee sting. Also spiders in general don\u2019t deliberately bite humans. I find this example particularly unintentionally funny because if you have no knowledge of spiders this scene is a scary assassin attempt but if you do it comes across more like Bond\u2019s enemies were pranking him. </p>\n\n<p>In the movie \u201cHoles\u201d supposedly dangerous \u201cyellow spotted\u201d lizards are played by bearded dragons that IRL are non-venomous and unable to seriously harm humans with their bite and are know to be pretty calm and docile.</p>\n\n<p>In Raiders of the Lost Ark with the ironic exception of the cobra used in this shot most of the supposed dangerous snakes in this scene are either non-venomous snakes or legless lizards.</p>\n</div><!-- SC_ON -->",
+      "send_replies": true,
+      "spoiler": false,
+      "stickied": false,
+      "subcategory": "submission",
+      "subreddit": "TopCharacterTropes",
+      "subreddit_id": "t5_9t6uuf",
+      "subreddit_name_prefixed": "r/TopCharacterTropes",
+      "subreddit_subscribers": 1132623,
+      "subreddit_type": "public",
+      "suggested_sort": null,
+      "thumbnail": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=140&height=79&auto=webp&s=daf2e80bc4093bcc379baf40c78ed559183ca1ef",
+      "thumbnail_height": 79,
+      "thumbnail_width": 140,
+      "title": "\u201dScary\u201d animal scenes that becomes less scary the more you actually know of animals",
+      "top_awarded_type": null,
+      "total_awards_received": 0,
+      "treatment_tags": [],
+      "ups": 8410,
+      "upvote_ratio": 0.96,
+      "url": "https://www.reddit.com/gallery/1x3wfr5",
+      "url_overridden_by_dest": "https://www.reddit.com/gallery/1x3wfr5",
+      "user_reports": [],
+      "view_count": null,
+      "visited": false,
+      "wls": 6
+    }
+  ],
+  [
+    3,
+    "https://i.redd.it/3qmybl4vyzuh1.jpg",
+    {
+      "all_awardings": [],
+      "allow_live_comments": false,
+      "approved_at_utc": null,
+      "approved_by": null,
+      "archived": false,
+      "author": "KingWilliamVI",
+      "author_flair_background_color": null,
+      "author_flair_css_class": null,
+      "author_flair_richtext": [],
+      "author_flair_template_id": null,
+      "author_flair_text": null,
+      "author_flair_text_color": null,
+      "author_flair_type": "text",
+      "author_fullname": "t2_i1toold",
+      "author_is_blocked": false,
+      "author_patreon_flair": false,
+      "author_premium": false,
+      "awarders": [],
+      "banned_at_utc": null,
+      "banned_by": null,
+      "can_gild": false,
+      "can_mod_post": false,
+      "category": "reddit",
+      "clicked": false,
+      "comment": null,
+      "content_categories": null,
+      "contest_mode": false,
+      "created": 1791793788.0,
+      "created_utc": 1791793788.0,
+      "date": "2026-10-12 08:29:48",
+      "discussion_type": null,
+      "distinguished": null,
+      "domain": "reddit.com",
+      "downs": 0,
+      "edited": false,
+      "extension": "jpg",
+      "filename": "3qmybl4vyzuh1",
+      "gallery_data": {
+        "items": [
+          {
+            "id": 1068860037,
+            "is_deleted": false,
+            "media_id": "3qmybl4vyzuh1"
+          },
+          {
+            "id": 1068860038,
+            "is_deleted": false,
+            "media_id": "bv544l4vyzuh1"
+          },
+          {
+            "id": 1068860039,
+            "is_deleted": false,
+            "media_id": "wnsifk4vyzuh1"
+          }
+        ]
+      },
+      "gilded": 0,
+      "gildings": {},
+      "hidden": false,
+      "hide_score": false,
+      "id": "1x3wfr5",
+      "is_created_from_ads_ui": false,
+      "is_crosspostable": true,
+      "is_gallery": true,
+      "is_meta": false,
+      "is_original_content": false,
+      "is_reddit_media_domain": false,
+      "is_robot_indexable": true,
+      "is_self": false,
+      "is_video": false,
+      "likes": null,
+      "link_flair_background_color": "#014980",
+      "link_flair_css_class": "",
+      "link_flair_richtext": [],
+      "link_flair_template_id": "ab87c4e8-0ad3-11ef-9ca1-1e0cbb8e359d",
+      "link_flair_text": "Lore",
+      "link_flair_text_color": "light",
+      "link_flair_type": "text",
+      "locked": false,
+      "media": null,
+      "media_embed": {},
+      "media_metadata": {
+        "3qmybl4vyzuh1": {
+          "e": "Image",
+          "id": "3qmybl4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=23ff992391071e2458dcdc742c2c57fb0e9a6037",
+              "x": 108,
+              "y": 61
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=b5bf7bc5cdd02bf68ff3f5055da33327668046b6",
+              "x": 216,
+              "y": 122
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=31d91b6dd7b89ffa0adad1b999c21af96a07fee1",
+              "x": 320,
+              "y": 180
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=bad059419dabbc4d143bbdf7addeedf9b963948e",
+              "x": 640,
+              "y": 361
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=750&format=pjpg&auto=webp&s=286bf9390e167f41386f79822ebde6d5406c0106",
+            "x": 750,
+            "y": 424
+          },
+          "status": "valid"
+        },
+        "bv544l4vyzuh1": {
+          "e": "Image",
+          "id": "bv544l4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=214a4f79549122858ac2a0912b8fa867381c7701",
+              "x": 108,
+              "y": 60
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=d1bb0c2aedc38bb2564813f04e1ef3be285146cb",
+              "x": 216,
+              "y": 120
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=cf1f16685c25a09d995141d0e1b0854eaf134614",
+              "x": 320,
+              "y": 177
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=1730dfb996b345e15744b975115c2e685c2c512f",
+              "x": 640,
+              "y": 355
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=750&format=pjpg&auto=webp&s=77add39a076beb83d65c0b96592a4ecb1cedb6d5",
+            "x": 750,
+            "y": 417
+          },
+          "status": "valid"
+        },
+        "wnsifk4vyzuh1": {
+          "e": "Image",
+          "id": "wnsifk4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=62352e2e7cd25d59f44e5c2bd1d4e27000b494ed",
+              "x": 108,
+              "y": 91
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=6ec91c87e28e2299a99efbb945bebcf183ea0ae5",
+              "x": 216,
+              "y": 183
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=aa50d753cd1f43c3dec6df4e14c7b85f5d2a35d4",
+              "x": 320,
+              "y": 271
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=0520c8dd4518ac1e1534cab5f94be3146429926d",
+              "x": 640,
+              "y": 543
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=641&format=pjpg&auto=webp&s=3e210b3edb3cbad1a052d0ae704ea1b08d1395b4",
+            "x": 641,
+            "y": 544
+          },
+          "status": "valid"
+        }
+      },
+      "media_only": false,
+      "mod_note": null,
+      "mod_reason_by": null,
+      "mod_reason_title": null,
+      "mod_reports": [],
+      "name": "t3_1x3wfr5",
+      "no_follow": false,
+      "num": 1,
+      "num_comments": 1190,
+      "num_crossposts": 0,
+      "num_duplicates": 0,
+      "num_reports": null,
+      "over_18": false,
+      "permalink": "/r/TopCharacterTropes/comments/1x3wfr5/scary_animal_scenes_that_becomes_less_scary_the/",
+      "pinned": false,
+      "pwls": 6,
+      "quarantine": false,
+      "removal_reason": null,
+      "removed_by": null,
+      "removed_by_category": null,
+      "report_reasons": null,
+      "saved": false,
+      "score": 8410,
+      "secure_media": null,
+      "secure_media_embed": {},
+      "selftext": "In Dr No James Bond\u2019s enemies tries to kill him by releasing a spider into his room. That spider is a Tarantula one of the more calmer Spiders species whose bite is not much worse than a bee sting. Also spiders in general don\u2019t deliberately bite humans. I find this example particularly unintentionally funny because if you have no knowledge of spiders this scene is a scary assassin attempt but if you do it comes across more like Bond\u2019s enemies were pranking him. \n\nIn the movie \u201cHoles\u201d supposedly dangerous \u201cyellow spotted\u201d lizards are played by bearded dragons that IRL are non-venomous and unable to seriously harm humans with their bite and are know to be pretty calm and docile.\n\nIn Raiders of the Lost Ark with the ironic exception of the cobra used in this shot most of the supposed dangerous snakes in this scene are either non-venomous snakes or legless lizards.",
+      "selftext_html": "<!-- SC_OFF --><div class=\"md\"><p>In Dr No James Bond\u2019s enemies tries to kill him by releasing a spider into his room. That spider is a Tarantula one of the more calmer Spiders species whose bite is not much worse than a bee sting. Also spiders in general don\u2019t deliberately bite humans. I find this example particularly unintentionally funny because if you have no knowledge of spiders this scene is a scary assassin attempt but if you do it comes across more like Bond\u2019s enemies were pranking him. </p>\n\n<p>In the movie \u201cHoles\u201d supposedly dangerous \u201cyellow spotted\u201d lizards are played by bearded dragons that IRL are non-venomous and unable to seriously harm humans with their bite and are know to be pretty calm and docile.</p>\n\n<p>In Raiders of the Lost Ark with the ironic exception of the cobra used in this shot most of the supposed dangerous snakes in this scene are either non-venomous snakes or legless lizards.</p>\n</div><!-- SC_ON -->",
+      "send_replies": true,
+      "spoiler": false,
+      "stickied": false,
+      "subcategory": "submission",
+      "subreddit": "TopCharacterTropes",
+      "subreddit_id": "t5_9t6uuf",
+      "subreddit_name_prefixed": "r/TopCharacterTropes",
+      "subreddit_subscribers": 1132623,
+      "subreddit_type": "public",
+      "suggested_sort": null,
+      "thumbnail": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=140&height=79&auto=webp&s=daf2e80bc4093bcc379baf40c78ed559183ca1ef",
+      "thumbnail_height": 79,
+      "thumbnail_width": 140,
+      "title": "\u201dScary\u201d animal scenes that becomes less scary the more you actually know of animals",
+      "top_awarded_type": null,
+      "total_awards_received": 0,
+      "treatment_tags": [],
+      "ups": 8410,
+      "upvote_ratio": 0.96,
+      "url": "https://www.reddit.com/gallery/1x3wfr5",
+      "url_overridden_by_dest": "https://www.reddit.com/gallery/1x3wfr5",
+      "user_reports": [],
+      "view_count": null,
+      "visited": false,
+      "wls": 6
+    }
+  ],
+  [
+    3,
+    "https://i.redd.it/bv544l4vyzuh1.jpg",
+    {
+      "all_awardings": [],
+      "allow_live_comments": false,
+      "approved_at_utc": null,
+      "approved_by": null,
+      "archived": false,
+      "author": "KingWilliamVI",
+      "author_flair_background_color": null,
+      "author_flair_css_class": null,
+      "author_flair_richtext": [],
+      "author_flair_template_id": null,
+      "author_flair_text": null,
+      "author_flair_text_color": null,
+      "author_flair_type": "text",
+      "author_fullname": "t2_i1toold",
+      "author_is_blocked": false,
+      "author_patreon_flair": false,
+      "author_premium": false,
+      "awarders": [],
+      "banned_at_utc": null,
+      "banned_by": null,
+      "can_gild": false,
+      "can_mod_post": false,
+      "category": "reddit",
+      "clicked": false,
+      "comment": null,
+      "content_categories": null,
+      "contest_mode": false,
+      "created": 1791793788.0,
+      "created_utc": 1791793788.0,
+      "date": "2026-10-12 08:29:48",
+      "discussion_type": null,
+      "distinguished": null,
+      "domain": "reddit.com",
+      "downs": 0,
+      "edited": false,
+      "extension": "jpg",
+      "filename": "bv544l4vyzuh1",
+      "gallery_data": {
+        "items": [
+          {
+            "id": 1068860037,
+            "is_deleted": false,
+            "media_id": "3qmybl4vyzuh1"
+          },
+          {
+            "id": 1068860038,
+            "is_deleted": false,
+            "media_id": "bv544l4vyzuh1"
+          },
+          {
+            "id": 1068860039,
+            "is_deleted": false,
+            "media_id": "wnsifk4vyzuh1"
+          }
+        ]
+      },
+      "gilded": 0,
+      "gildings": {},
+      "hidden": false,
+      "hide_score": false,
+      "id": "1x3wfr5",
+      "is_created_from_ads_ui": false,
+      "is_crosspostable": true,
+      "is_gallery": true,
+      "is_meta": false,
+      "is_original_content": false,
+      "is_reddit_media_domain": false,
+      "is_robot_indexable": true,
+      "is_self": false,
+      "is_video": false,
+      "likes": null,
+      "link_flair_background_color": "#014980",
+      "link_flair_css_class": "",
+      "link_flair_richtext": [],
+      "link_flair_template_id": "ab87c4e8-0ad3-11ef-9ca1-1e0cbb8e359d",
+      "link_flair_text": "Lore",
+      "link_flair_text_color": "light",
+      "link_flair_type": "text",
+      "locked": false,
+      "media": null,
+      "media_embed": {},
+      "media_metadata": {
+        "3qmybl4vyzuh1": {
+          "e": "Image",
+          "id": "3qmybl4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=23ff992391071e2458dcdc742c2c57fb0e9a6037",
+              "x": 108,
+              "y": 61
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=b5bf7bc5cdd02bf68ff3f5055da33327668046b6",
+              "x": 216,
+              "y": 122
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=31d91b6dd7b89ffa0adad1b999c21af96a07fee1",
+              "x": 320,
+              "y": 180
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=bad059419dabbc4d143bbdf7addeedf9b963948e",
+              "x": 640,
+              "y": 361
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=750&format=pjpg&auto=webp&s=286bf9390e167f41386f79822ebde6d5406c0106",
+            "x": 750,
+            "y": 424
+          },
+          "status": "valid"
+        },
+        "bv544l4vyzuh1": {
+          "e": "Image",
+          "id": "bv544l4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=214a4f79549122858ac2a0912b8fa867381c7701",
+              "x": 108,
+              "y": 60
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=d1bb0c2aedc38bb2564813f04e1ef3be285146cb",
+              "x": 216,
+              "y": 120
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=cf1f16685c25a09d995141d0e1b0854eaf134614",
+              "x": 320,
+              "y": 177
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=1730dfb996b345e15744b975115c2e685c2c512f",
+              "x": 640,
+              "y": 355
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=750&format=pjpg&auto=webp&s=77add39a076beb83d65c0b96592a4ecb1cedb6d5",
+            "x": 750,
+            "y": 417
+          },
+          "status": "valid"
+        },
+        "wnsifk4vyzuh1": {
+          "e": "Image",
+          "id": "wnsifk4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=62352e2e7cd25d59f44e5c2bd1d4e27000b494ed",
+              "x": 108,
+              "y": 91
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=6ec91c87e28e2299a99efbb945bebcf183ea0ae5",
+              "x": 216,
+              "y": 183
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=aa50d753cd1f43c3dec6df4e14c7b85f5d2a35d4",
+              "x": 320,
+              "y": 271
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=0520c8dd4518ac1e1534cab5f94be3146429926d",
+              "x": 640,
+              "y": 543
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=641&format=pjpg&auto=webp&s=3e210b3edb3cbad1a052d0ae704ea1b08d1395b4",
+            "x": 641,
+            "y": 544
+          },
+          "status": "valid"
+        }
+      },
+      "media_only": false,
+      "mod_note": null,
+      "mod_reason_by": null,
+      "mod_reason_title": null,
+      "mod_reports": [],
+      "name": "t3_1x3wfr5",
+      "no_follow": false,
+      "num": 2,
+      "num_comments": 1190,
+      "num_crossposts": 0,
+      "num_duplicates": 0,
+      "num_reports": null,
+      "over_18": false,
+      "permalink": "/r/TopCharacterTropes/comments/1x3wfr5/scary_animal_scenes_that_becomes_less_scary_the/",
+      "pinned": false,
+      "pwls": 6,
+      "quarantine": false,
+      "removal_reason": null,
+      "removed_by": null,
+      "removed_by_category": null,
+      "report_reasons": null,
+      "saved": false,
+      "score": 8410,
+      "secure_media": null,
+      "secure_media_embed": {},
+      "selftext": "In Dr No James Bond\u2019s enemies tries to kill him by releasing a spider into his room. That spider is a Tarantula one of the more calmer Spiders species whose bite is not much worse than a bee sting. Also spiders in general don\u2019t deliberately bite humans. I find this example particularly unintentionally funny because if you have no knowledge of spiders this scene is a scary assassin attempt but if you do it comes across more like Bond\u2019s enemies were pranking him. \n\nIn the movie \u201cHoles\u201d supposedly dangerous \u201cyellow spotted\u201d lizards are played by bearded dragons that IRL are non-venomous and unable to seriously harm humans with their bite and are know to be pretty calm and docile.\n\nIn Raiders of the Lost Ark with the ironic exception of the cobra used in this shot most of the supposed dangerous snakes in this scene are either non-venomous snakes or legless lizards.",
+      "selftext_html": "<!-- SC_OFF --><div class=\"md\"><p>In Dr No James Bond\u2019s enemies tries to kill him by releasing a spider into his room. That spider is a Tarantula one of the more calmer Spiders species whose bite is not much worse than a bee sting. Also spiders in general don\u2019t deliberately bite humans. I find this example particularly unintentionally funny because if you have no knowledge of spiders this scene is a scary assassin attempt but if you do it comes across more like Bond\u2019s enemies were pranking him. </p>\n\n<p>In the movie \u201cHoles\u201d supposedly dangerous \u201cyellow spotted\u201d lizards are played by bearded dragons that IRL are non-venomous and unable to seriously harm humans with their bite and are know to be pretty calm and docile.</p>\n\n<p>In Raiders of the Lost Ark with the ironic exception of the cobra used in this shot most of the supposed dangerous snakes in this scene are either non-venomous snakes or legless lizards.</p>\n</div><!-- SC_ON -->",
+      "send_replies": true,
+      "spoiler": false,
+      "stickied": false,
+      "subcategory": "submission",
+      "subreddit": "TopCharacterTropes",
+      "subreddit_id": "t5_9t6uuf",
+      "subreddit_name_prefixed": "r/TopCharacterTropes",
+      "subreddit_subscribers": 1132623,
+      "subreddit_type": "public",
+      "suggested_sort": null,
+      "thumbnail": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=140&height=79&auto=webp&s=daf2e80bc4093bcc379baf40c78ed559183ca1ef",
+      "thumbnail_height": 79,
+      "thumbnail_width": 140,
+      "title": "\u201dScary\u201d animal scenes that becomes less scary the more you actually know of animals",
+      "top_awarded_type": null,
+      "total_awards_received": 0,
+      "treatment_tags": [],
+      "ups": 8410,
+      "upvote_ratio": 0.96,
+      "url": "https://www.reddit.com/gallery/1x3wfr5",
+      "url_overridden_by_dest": "https://www.reddit.com/gallery/1x3wfr5",
+      "user_reports": [],
+      "view_count": null,
+      "visited": false,
+      "wls": 6
+    }
+  ],
+  [
+    3,
+    "https://i.redd.it/wnsifk4vyzuh1.jpg",
+    {
+      "all_awardings": [],
+      "allow_live_comments": false,
+      "approved_at_utc": null,
+      "approved_by": null,
+      "archived": false,
+      "author": "KingWilliamVI",
+      "author_flair_background_color": null,
+      "author_flair_css_class": null,
+      "author_flair_richtext": [],
+      "author_flair_template_id": null,
+      "author_flair_text": null,
+      "author_flair_text_color": null,
+      "author_flair_type": "text",
+      "author_fullname": "t2_i1toold",
+      "author_is_blocked": false,
+      "author_patreon_flair": false,
+      "author_premium": false,
+      "awarders": [],
+      "banned_at_utc": null,
+      "banned_by": null,
+      "can_gild": false,
+      "can_mod_post": false,
+      "category": "reddit",
+      "clicked": false,
+      "comment": null,
+      "content_categories": null,
+      "contest_mode": false,
+      "created": 1791793788.0,
+      "created_utc": 1791793788.0,
+      "date": "2026-10-12 08:29:48",
+      "discussion_type": null,
+      "distinguished": null,
+      "domain": "reddit.com",
+      "downs": 0,
+      "edited": false,
+      "extension": "jpg",
+      "filename": "wnsifk4vyzuh1",
+      "gallery_data": {
+        "items": [
+          {
+            "id": 1068860037,
+            "is_deleted": false,
+            "media_id": "3qmybl4vyzuh1"
+          },
+          {
+            "id": 1068860038,
+            "is_deleted": false,
+            "media_id": "bv544l4vyzuh1"
+          },
+          {
+            "id": 1068860039,
+            "is_deleted": false,
+            "media_id": "wnsifk4vyzuh1"
+          }
+        ]
+      },
+      "gilded": 0,
+      "gildings": {},
+      "hidden": false,
+      "hide_score": false,
+      "id": "1x3wfr5",
+      "is_created_from_ads_ui": false,
+      "is_crosspostable": true,
+      "is_gallery": true,
+      "is_meta": false,
+      "is_original_content": false,
+      "is_reddit_media_domain": false,
+      "is_robot_indexable": true,
+      "is_self": false,
+      "is_video": false,
+      "likes": null,
+      "link_flair_background_color": "#014980",
+      "link_flair_css_class": "",
+      "link_flair_richtext": [],
+      "link_flair_template_id": "ab87c4e8-0ad3-11ef-9ca1-1e0cbb8e359d",
+      "link_flair_text": "Lore",
+      "link_flair_text_color": "light",
+      "link_flair_type": "text",
+      "locked": false,
+      "media": null,
+      "media_embed": {},
+      "media_metadata": {
+        "3qmybl4vyzuh1": {
+          "e": "Image",
+          "id": "3qmybl4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=23ff992391071e2458dcdc742c2c57fb0e9a6037",
+              "x": 108,
+              "y": 61
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=b5bf7bc5cdd02bf68ff3f5055da33327668046b6",
+              "x": 216,
+              "y": 122
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=31d91b6dd7b89ffa0adad1b999c21af96a07fee1",
+              "x": 320,
+              "y": 180
+            },
+            {
+              "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=bad059419dabbc4d143bbdf7addeedf9b963948e",
+              "x": 640,
+              "y": 361
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=750&format=pjpg&auto=webp&s=286bf9390e167f41386f79822ebde6d5406c0106",
+            "x": 750,
+            "y": 424
+          },
+          "status": "valid"
+        },
+        "bv544l4vyzuh1": {
+          "e": "Image",
+          "id": "bv544l4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=214a4f79549122858ac2a0912b8fa867381c7701",
+              "x": 108,
+              "y": 60
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=d1bb0c2aedc38bb2564813f04e1ef3be285146cb",
+              "x": 216,
+              "y": 120
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=cf1f16685c25a09d995141d0e1b0854eaf134614",
+              "x": 320,
+              "y": 177
+            },
+            {
+              "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=1730dfb996b345e15744b975115c2e685c2c512f",
+              "x": 640,
+              "y": 355
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/bv544l4vyzuh1.jpg?width=750&format=pjpg&auto=webp&s=77add39a076beb83d65c0b96592a4ecb1cedb6d5",
+            "x": 750,
+            "y": 417
+          },
+          "status": "valid"
+        },
+        "wnsifk4vyzuh1": {
+          "e": "Image",
+          "id": "wnsifk4vyzuh1",
+          "m": "image/jpg",
+          "p": [
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=108&crop=smart&auto=webp&s=62352e2e7cd25d59f44e5c2bd1d4e27000b494ed",
+              "x": 108,
+              "y": 91
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=216&crop=smart&auto=webp&s=6ec91c87e28e2299a99efbb945bebcf183ea0ae5",
+              "x": 216,
+              "y": 183
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=320&crop=smart&auto=webp&s=aa50d753cd1f43c3dec6df4e14c7b85f5d2a35d4",
+              "x": 320,
+              "y": 271
+            },
+            {
+              "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=640&crop=smart&auto=webp&s=0520c8dd4518ac1e1534cab5f94be3146429926d",
+              "x": 640,
+              "y": 543
+            }
+          ],
+          "s": {
+            "u": "https://preview.redd.it/wnsifk4vyzuh1.jpg?width=641&format=pjpg&auto=webp&s=3e210b3edb3cbad1a052d0ae704ea1b08d1395b4",
+            "x": 641,
+            "y": 544
+          },
+          "status": "valid"
+        }
+      },
+      "media_only": false,
+      "mod_note": null,
+      "mod_reason_by": null,
+      "mod_reason_title": null,
+      "mod_reports": [],
+      "name": "t3_1x3wfr5",
+      "no_follow": false,
+      "num": 3,
+      "num_comments": 1190,
+      "num_crossposts": 0,
+      "num_duplicates": 0,
+      "num_reports": null,
+      "over_18": false,
+      "permalink": "/r/TopCharacterTropes/comments/1x3wfr5/scary_animal_scenes_that_becomes_less_scary_the/",
+      "pinned": false,
+      "pwls": 6,
+      "quarantine": false,
+      "removal_reason": null,
+      "removed_by": null,
+      "removed_by_category": null,
+      "report_reasons": null,
+      "saved": false,
+      "score": 8410,
+      "secure_media": null,
+      "secure_media_embed": {},
+      "selftext": "In Dr No James Bond\u2019s enemies tries to kill him by releasing a spider into his room. That spider is a Tarantula one of the more calmer Spiders species whose bite is not much worse than a bee sting. Also spiders in general don\u2019t deliberately bite humans. I find this example particularly unintentionally funny because if you have no knowledge of spiders this scene is a scary assassin attempt but if you do it comes across more like Bond\u2019s enemies were pranking him. \n\nIn the movie \u201cHoles\u201d supposedly dangerous \u201cyellow spotted\u201d lizards are played by bearded dragons that IRL are non-venomous and unable to seriously harm humans with their bite and are know to be pretty calm and docile.\n\nIn Raiders of the Lost Ark with the ironic exception of the cobra used in this shot most of the supposed dangerous snakes in this scene are either non-venomous snakes or legless lizards.",
+      "selftext_html": "<!-- SC_OFF --><div class=\"md\"><p>In Dr No James Bond\u2019s enemies tries to kill him by releasing a spider into his room. That spider is a Tarantula one of the more calmer Spiders species whose bite is not much worse than a bee sting. Also spiders in general don\u2019t deliberately bite humans. I find this example particularly unintentionally funny because if you have no knowledge of spiders this scene is a scary assassin attempt but if you do it comes across more like Bond\u2019s enemies were pranking him. </p>\n\n<p>In the movie \u201cHoles\u201d supposedly dangerous \u201cyellow spotted\u201d lizards are played by bearded dragons that IRL are non-venomous and unable to seriously harm humans with their bite and are know to be pretty calm and docile.</p>\n\n<p>In Raiders of the Lost Ark with the ironic exception of the cobra used in this shot most of the supposed dangerous snakes in this scene are either non-venomous snakes or legless lizards.</p>\n</div><!-- SC_ON -->",
+      "send_replies": true,
+      "spoiler": false,
+      "stickied": false,
+      "subcategory": "submission",
+      "subreddit": "TopCharacterTropes",
+      "subreddit_id": "t5_9t6uuf",
+      "subreddit_name_prefixed": "r/TopCharacterTropes",
+      "subreddit_subscribers": 1132623,
+      "subreddit_type": "public",
+      "suggested_sort": null,
+      "thumbnail": "https://preview.redd.it/3qmybl4vyzuh1.jpg?width=140&height=79&auto=webp&s=daf2e80bc4093bcc379baf40c78ed559183ca1ef",
+      "thumbnail_height": 79,
+      "thumbnail_width": 140,
+      "title": "\u201dScary\u201d animal scenes that becomes less scary the more you actually know of animals",
+      "top_awarded_type": null,
+      "total_awards_received": 0,
+      "treatment_tags": [],
+      "ups": 8410,
+      "upvote_ratio": 0.96,
+      "url": "https://www.reddit.com/gallery/1x3wfr5",
+      "url_overridden_by_dest": "https://www.reddit.com/gallery/1x3wfr5",
+      "user_reports": [],
+      "view_count": null,
+      "visited": false,
+      "wls": 6
+    }
+  ]
+]

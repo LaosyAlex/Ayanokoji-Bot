@@ -3,6 +3,8 @@ from enum import Enum
 import os
 import compression
 import utils
+import asyncio
+import subprocess
 
 class Extract(ABC):
     #private
@@ -47,11 +49,79 @@ class Extract(ABC):
     def _get_type(self):
         self.type
     '''
+    async def _download_video(self, url) -> str: #path
+        cmd = [
+            "gallery-dl",
+            "--cookies-from-browser", "firefox",
+            "-P", r"local\temp",
+            "--print", "after_move:filepath",
+            str(url)
+        ]
+
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+
+        stdout, stderr = await proc.communicate()
+
+        path = stdout.decode()
+
+        return str(path).strip()
+
+    async def _download_single(self, url) -> str: #path
+        cmd = [
+            "gallery-dl",
+            "--cookies-from-browser", "firefox",
+            "-D", r"local\temp",
+            str(url)
+        ]
+
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+
+        stdout, stderr = await proc.communicate()
+
+        path = stdout.decode("cp1252")
+
+        return str(path).removeprefix("# ").strip()
+
+    async def _download_gallery(self, url) -> list[str]: #path
+        cmd = [
+            "gallery-dl",
+            "--cookies-from-browser", "firefox",
+            "-D", r"local\temp",
+            str(url)
+        ]
+
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+
+        stdout, stderr = await proc.communicate()
+
+        paths = stdout.decode("cp1252").splitlines()
+
+        for index, path in enumerate(paths):
+            paths[index] = str(path).removeprefix("# ").strip()
+
+        return paths
+
     def _set_text(self, text):
         pass
 
-    def _append_download(self, path):
-        self.__downloads.append(path)
+    def _append_download(self, paths: str | list[str]):
+        if isinstance(paths, str):
+            paths = [paths]
+
+        for path in paths:
+            self.__downloads.append(path)
 
     @abstractmethod
     def _extract(self):

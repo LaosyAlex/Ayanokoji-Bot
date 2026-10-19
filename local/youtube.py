@@ -1,5 +1,4 @@
 from extraction import Extract
-import pathlib as path
 import asyncio
 import subprocess
 import json
@@ -9,6 +8,7 @@ class Youtube(Extract):
     async def __download_json(self, url) -> tuple[str, str]: #title description
         cmd = [
             "yt-dlp",
+            "--cookies-from-browser", "firefox",
             "-J",
             str(url)
         ]
@@ -28,32 +28,11 @@ class Youtube(Extract):
 
         return title, description
 
-    async def __download_video(self, url) -> str: #path
-        cmd = [
-            "yt-dlp",
-            "-P", r"local\temp",
-            "--print", "after_move:filepath",
-            str(url)
-        ]
-
-        proc = await asyncio.create_subprocess_exec(
-            *cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
-
-        stdout, stderr = await proc.communicate()
-
-        path = stdout.decode()
-
-        return str(path).strip()
-        
-
-    async def __download(self, url) -> tuple[str, str, str]: #path, title, description
+    async def _download(self, url) -> tuple[str, str, str]: #path, title, description
 
         (title, description), path = await asyncio.gather(
             self.__download_json(url),
-            self.__download_video(url)
+            self._download_single(url)
         )
 
         return path, title, description

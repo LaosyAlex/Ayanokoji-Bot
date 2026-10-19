@@ -1,7 +1,8 @@
 from youtube import Youtube
 import asyncio
 
-test = Youtube(r"https://www.youtube.com/watch?v=p0XXK50weFU")
-test.process()
+test = Youtube("https://www.youtube.com/watch?v=SE1Z1-rJoB4")
+
+asyncio.run(test._download("https://www.youtube.com/watch?v=SE1Z1-rJoB4"))
 
              

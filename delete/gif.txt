@@ -1,0 +1,245 @@
+[
+  [
+    2,
+    {
+      "all_awardings": [],
+      "allow_live_comments": false,
+      "approved_at_utc": null,
+      "approved_by": null,
+      "archived": false,
+      "author": "IBoris",
+      "author_flair_background_color": "#002f6c",
+      "author_flair_css_class": null,
+      "author_flair_richtext": [
+        {
+          "e": "text",
+          "t": "Tabarnakistanais du Tabarnakistan "
+        },
+        {
+          "a": ":Fleurdelise:",
+          "e": "emoji",
+          "u": "https://emoji.redditmedia.com/apu68im7uxlh1_t5_30vw4p/Fleurdelise"
+        }
+      ],
+      "author_flair_template_id": "1ef3e894-a258-11f1-be6e-9a4bcb777020",
+      "author_flair_text": "Tabarnakistanais du Tabarnakistan :Fleurdelise:",
+      "author_flair_text_color": "light",
+      "author_flair_type": "richtext",
+      "author_fullname": "t2_4ao5h",
+      "author_is_blocked": false,
+      "author_patreon_flair": false,
+      "author_premium": false,
+      "awarders": [],
+      "banned_at_utc": null,
+      "banned_by": null,
+      "can_gild": false,
+      "can_mod_post": false,
+      "category": "reddit",
+      "clicked": false,
+      "comment": null,
+      "content_categories": null,
+      "contest_mode": false,
+      "created": 1791809996.0,
+      "created_utc": 1791809996.0,
+      "date": "2026-10-12 12:59:56",
+      "discussion_type": null,
+      "distinguished": null,
+      "domain": "i.makeagif.com",
+      "downs": 0,
+      "edited": false,
+      "gilded": 0,
+      "gildings": {},
+      "hidden": false,
+      "hide_score": false,
+      "id": "1x417en",
+      "is_created_from_ads_ui": false,
+      "is_crosspostable": true,
+      "is_meta": false,
+      "is_original_content": false,
+      "is_reddit_media_domain": false,
+      "is_robot_indexable": true,
+      "is_self": false,
+      "is_video": false,
+      "likes": null,
+      "link_flair_background_color": "#ff0000",
+      "link_flair_css_class": "",
+      "link_flair_richtext": [
+        {
+          "e": "text",
+          "t": "Elbows Up/Coudes en l'air  "
+        },
+        {
+          "a": ":Canada:",
+          "e": "emoji",
+          "u": "https://emoji.redditmedia.com/5yflsrp7uxlh1_t5_30vw4p/Canada"
+        }
+      ],
+      "link_flair_template_id": "6a344d86-a45f-11f1-93b7-d291bc506c57",
+      "link_flair_text": "Elbows Up/Coudes en l'air  :Canada:",
+      "link_flair_text_color": "light",
+      "link_flair_type": "richtext",
+      "locked": false,
+      "media": null,
+      "media_embed": {},
+      "media_only": false,
+      "mod_note": null,
+      "mod_reason_by": null,
+      "mod_reason_title": null,
+      "mod_reports": [],
+      "name": "t3_1x417en",
+      "no_follow": false,
+      "num_comments": 131,
+      "num_crossposts": 1,
+      "num_duplicates": 1,
+      "num_reports": null,
+      "over_18": false,
+      "permalink": "/r/EhBuddyHoser/comments/1x417en/roaming_the_empty_streets_of_all_the_canadian/",
+      "pinned": false,
+      "post_hint": "image",
+      "preview": {
+        "enabled": true,
+        "images": [
+          {
+            "id": "4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg",
+            "resolutions": [
+              {
+                "height": 60,
+                "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=108&crop=smart&format=png8&s=b000ae3ba716f9bacad7e126c803061229504a70",
+                "width": 108
+              },
+              {
+                "height": 121,
+                "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=216&crop=smart&format=png8&s=3a80ece8d1b5fe4dd2d93484b397db06fd204fd2",
+                "width": 216
+              },
+              {
+                "height": 180,
+                "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=320&crop=smart&format=png8&s=2623ee2830afa91620be5ba5677d8d9463c6a210",
+                "width": 320
+              }
+            ],
+            "source": {
+              "height": 180,
+              "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?format=png8&s=992e3385475a81f12a9c99da8dd7bddab800ea3f",
+              "width": 320
+            },
+            "variants": {
+              "gif": {
+                "resolutions": [
+                  {
+                    "height": 60,
+                    "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=108&crop=smart&s=d40c8588366748f292e7d757d6f11421705defdc",
+                    "width": 108
+                  },
+                  {
+                    "height": 121,
+                    "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=216&crop=smart&s=b48bd2a22f03221cd4ba2e3a95262405aa69d812",
+                    "width": 216
+                  },
+                  {
+                    "height": 180,
+                    "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=320&crop=smart&s=ef7b84ffee043ae2fa042aa5c695e69a0726f0d9",
+                    "width": 320
+                  }
+                ],
+                "source": {
+                  "height": 180,
+                  "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?s=a2f9b001ce769b8e23b9d4a94790718feb7c62fe",
+                  "width": 320
+                }
+              },
+              "mp4": {
+                "resolutions": [
+                  {
+                    "height": 60,
+                    "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=108&format=mp4&s=bf58a1fea87ce58032b5efb028b2500a05d4d3f8",
+                    "width": 108
+                  },
+                  {
+                    "height": 121,
+                    "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=216&format=mp4&s=adf2e9be8fa7f697433d41ea01d86397e011f1dd",
+                    "width": 216
+                  },
+                  {
+                    "height": 180,
+                    "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?width=320&format=mp4&s=db39a55501c26cc85051ba41e4a33a87d1be1c87",
+                    "width": 320
+                  }
+                ],
+                "source": {
+                  "height": 180,
+                  "url": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?format=mp4&s=c813ad49623e1fe4f77115957e0d0d06a2f8529f",
+                  "width": 320
+                }
+              }
+            }
+          }
+        ]
+      },
+      "pwls": 7,
+      "quarantine": false,
+      "removal_reason": null,
+      "removed_by": null,
+      "removed_by_category": null,
+      "report_reasons": null,
+      "saved": false,
+      "score": 3195,
+      "secure_media": null,
+      "secure_media_embed": {},
+      "selftext": "I mean, the American Bots are still out in full force, but those are easy to spot given their use of inferior English, lack of cultural savvyness and inability to even understand a basic hello/bonjour in tabarnakistanese.",
+      "selftext_html": "<!-- SC_OFF --><div class=\"md\"><p>I mean, the American Bots are still out in full force, but those are easy to spot given their use of inferior English, lack of cultural savvyness and inability to even understand a basic hello/bonjour in tabarnakistanese.</p>\n</div><!-- SC_ON -->",
+      "send_replies": true,
+      "spoiler": false,
+      "stickied": false,
+      "subcategory": "submission",
+      "subreddit": "EhBuddyHoser",
+      "subreddit_id": "t5_30vw4p",
+      "subreddit_name_prefixed": "r/EhBuddyHoser",
+      "subreddit_subscribers": 130143,
+      "subreddit_type": "public",
+      "suggested_sort": "confidence",
+      "thumbnail": "https://external-preview.redd.it/4gP4zykBupwQ9hkdcpvrCZynrONX_mvWRzhhMoQ9GTg.gif?frame=1&width=140&height=78&auto=webp&s=c9005e3e9910954ea70279ef988fa6a08b1c4f8d",
+      "thumbnail_height": 78,
+      "thumbnail_width": 140,
+      "title": "Roaming the empty streets of all the Canadian Subreddits now that the Russian Bots have had their Ukraini Slava'ed.",
+      "top_awarded_type": null,
+      "total_awards_received": 0,
+      "treatment_tags": [],
+      "ups": 3195,
+      "upvote_ratio": 0.97,
+      "url": "https://i.makeagif.com/media/7-24-2016/PTz_2M.gif",
+      "url_overridden_by_dest": "https://i.makeagif.com/media/7-24-2016/PTz_2M.gif",
+      "user_reports": [],
+      "view_count": null,
+      "visited": false,
+      "wls": 7
+    }
+  ],
+  [
+    2,
+    {
+      "category": "directlink",
+      "domain": "i.makeagif.com",
+      "extension": "gif",
+      "filename": "PTz_2M",
+      "fragment": null,
+      "path": "media/7-24-2016",
+      "query": null,
+      "subcategory": "makeagif.com"
+    }
+  ],
+  [
+    3,
+    "https://i.makeagif.com/media/7-24-2016/PTz_2M.gif",
+    {
+      "category": "directlink",
+      "domain": "i.makeagif.com",
+      "extension": "gif",
+      "filename": "PTz_2M",
+      "fragment": null,
+      "path": "media/7-24-2016",
+      "query": null,
+      "subcategory": "makeagif.com"
+    }
+  ]
+]
