@@ -39,8 +39,33 @@ class Generic(Extract):
 
         return title, desc
 
-    def __download(self, url) -> list[any]:
-        pass
+    @staticmethod
+    def __download(url: str) -> list[any] | str:
+        try:
+            try:
+                paths = Generic._download_gallery_dl(url)
+                return paths
+            except Exception as e1:
+                print(type(e1).__name__, e1)
+                try:
+                    paths = Generic._download_yt_dlp(url)
+                    return paths
+                except Exception as e2:
+                    raise ExceptionGroup(
+                        "Both gallery-dl and yt-dlp failed to download.",
+                        [e1, e2]
+                    )
+        except ExceptionGroup as e:
+            print(e.message + "\n")
+
+            for error in e.exceptions:
+                if isinstance(error, subprocess.CalledProcessError):
+                    print(f"{error.cmd[0]} failed:")
+                    print(error.stderr)
+                else:
+                    print(type(error).__name__, error)
+
+            return None
 
     @staticmethod
     def __format_text(title: str, desc: str) -> str:
