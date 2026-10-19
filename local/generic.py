@@ -42,8 +42,11 @@ class Generic(Extract):
     def __download(self, url) -> list[any]:
         pass
 
-    def __format_text(self, title, desc) -> str:
-        pass
+    @staticmethod
+    def __format_text(title: str, desc: str) -> str:
+        text = (title + "\n\n" if title else "") + desc
+
+        return text or ""
 
     #Protected
     def _extract(self):
