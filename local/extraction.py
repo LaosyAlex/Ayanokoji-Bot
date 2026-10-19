@@ -51,6 +51,27 @@ class Extract(ABC):
         self.type
     '''
     @staticmethod
+    def _find_field(field: str, data: dict | list) -> object | None:
+        if isinstance(data, dict):
+            for i, v in data.items():
+                if i == field:
+                    return v
+                else:
+                    if isinstance(v, (dict | list)):
+                        result = Extract._find_field(field, v)
+                        if result is not None:
+                            return result
+        elif isinstance(data, list):
+            for v in data:
+                if isinstance(v, (dict | list)):
+                    result = Extract._find_field(field, v)
+                    if result is not None:
+                        return result
+        
+        return None
+
+
+    @staticmethod
     def _is_403(stderr: str) -> bool:
         if "403 forbidden" in stderr.lower():
             return True
