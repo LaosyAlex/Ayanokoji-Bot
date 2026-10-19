@@ -9,6 +9,7 @@ class Generic(Extract):
             try:
                 cmd = [
                     "gallery-dl",
+                    "-v",
                     "-j",
                     "--cookies-from-browser", "firefox",
                     str(url)
@@ -29,6 +30,7 @@ class Generic(Extract):
 
                     cmd = [
                         "yt-dlp",
+                        "-v",
                         "-J",
                         "--cookies-from-browser", "firefox",
                         "--ignore-no-formats-error",

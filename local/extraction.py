@@ -49,6 +49,12 @@ class Extract(ABC):
     def _get_type(self):
         self.type
     '''
+    def _is_403(stderr: str) -> bool:
+        if "403 forbidden" in stderr.lower():
+            return True
+        else:
+            return False
+
     async def _download_video(self, url) -> str: #path
         cmd = [
             "gallery-dl",
