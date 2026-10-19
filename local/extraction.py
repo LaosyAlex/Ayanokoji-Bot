@@ -70,7 +70,6 @@ class Extract(ABC):
         
         return None
 
-
     @staticmethod
     def _is_403(stderr: str) -> bool:
         if "403 forbidden" in stderr.lower():
@@ -101,6 +100,28 @@ class Extract(ABC):
         return data
 
     @staticmethod
+    def _download_gallery_dl(url: str) -> list[str] | str:
+        cmd = [
+            "gallery-dl",
+            "-v",
+            "--cookies-from-browser", "firefox",
+            "-D", r"local\temp",
+            str(url)
+        ]
+
+        result = subprocess.run([*cmd], capture_output=True, text=True, check=False)
+
+        if Extract._is_403(result.stderr):
+            raise PermissionError("Request was blocked by site.")
+
+        paths = result.stdout.splitlines()
+
+        for index, path in enumerate(paths):
+            paths[index] = str(path).removeprefix("# ").strip()
+
+        return paths
+
+    @staticmethod
     def _get_json_yt_dlp(url: str) -> dict | list:
         cmd = [
             "yt-dlp",
@@ -123,74 +144,30 @@ class Extract(ABC):
         
         return data
 
-    async def _download_video(self, url) -> str: #path
+    @staticmethod
+    def _download_yt_dlp(url: str) -> list[str] | str:
         cmd = [
-            "gallery-dl",
-            "--cookies-from-browser", "firefox",
+            "yt-dlp",
+            "-v",
             "-P", r"local\temp",
             "--print", "after_move:filepath",
+            "--cookies-from-browser", "firefox",
             str(url)
         ]
 
-        proc = await asyncio.create_subprocess_exec(
-            *cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
+        result = subprocess.run([*cmd], capture_output=True, text=True, check=False)
 
-        stdout, stderr = await proc.communicate()
+        if Extract._is_403(result.stderr):
+            raise PermissionError("Request was blocked by site.")
 
-        path = stdout.decode()
+        path = result.stdout.decode()
 
         return str(path).strip()
-
-    async def _download_single(self, url) -> str: #path
-        cmd = [
-            "gallery-dl",
-            "--cookies-from-browser", "firefox",
-            "-D", r"local\temp",
-            str(url)
-        ]
-
-        proc = await asyncio.create_subprocess_exec(
-            *cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
-
-        stdout, stderr = await proc.communicate()
-
-        path = stdout.decode("cp1252")
-
-        return str(path).removeprefix("# ").strip()
-
-    async def _download_gallery(self, url) -> list[str]: #path
-        cmd = [
-            "gallery-dl",
-            "--cookies-from-browser", "firefox",
-            "-D", r"local\temp",
-            str(url)
-        ]
-
-        proc = await asyncio.create_subprocess_exec(
-            *cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
-
-        stdout, stderr = await proc.communicate()
-
-        paths = stdout.decode("cp1252").splitlines()
-
-        for index, path in enumerate(paths):
-            paths[index] = str(path).removeprefix("# ").strip()
-
-        return paths
 
     def _set_text(self, text):
         pass
 
-    def _append_download(self, paths: str | list[str]):
+    def _append_download(self, paths: str | list[str]) -> None:
         if isinstance(paths, str):
             paths = [paths]
 
