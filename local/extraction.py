@@ -1,25 +1,12 @@
 from abc import ABC, abstractmethod
-from enum import Enum
 import os
 import compression
 import utils
-import asyncio
 import subprocess
 import json
 
 class Extract(ABC):
     #private
-    class __Type(Enum):
-        UNKNOWN = 0
-        VIDEO = 1
-        IMAGE = 2
-        GALLERY = 3
-
-    __downloads = []
-
-    __text = []
-    __attachments = []
-
     def __compress(self):
         compression.text(self.__text)
 
@@ -37,19 +24,6 @@ class Extract(ABC):
                     print("Unknown file type")
 
     #protected
-    '''
-    @property
-    @abstractmethod
-    def _website(self):
-        pass
-
-    @abstractmethod
-    def _find_type():
-        pass
-
-    def _get_type(self):
-        self.type
-    '''
     @staticmethod
     def _find_field(field: str, data: dict | list) -> object | None:
         if isinstance(data, dict):
@@ -178,8 +152,8 @@ class Extract(ABC):
 
         return paths
 
-    def _set_text(self, text):
-        pass
+    def _set_text(self, text: str) -> None:
+        self.__text = text
 
     def _append_download(self, paths: str | list[str]) -> None:
         if isinstance(paths, str):
@@ -195,8 +169,9 @@ class Extract(ABC):
     #public
     def __init__(self, url):
         self.url = url
-        #self.type = self._find_type()
-
+        self.__downloads = []
+        self.__attachments = []
+        self.__text = []
 
     def __del__(self):
         for path in self.__downloads:

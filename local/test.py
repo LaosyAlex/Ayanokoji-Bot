@@ -1,6 +1,6 @@
 from generic import Generic
 
-test = Generic("https://www.youtube.com/watch?v=VDdLF1YubI0")
+test = Generic("https://www.instagram.com/p/DdvoHiTkcTt/?img_index=1")
 
 test._extract()
 
