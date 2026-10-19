@@ -7,7 +7,7 @@ cmd = [
     "-v",
     "-J",
     "--cookies-from-browser", "firefox",
-    "https://www.tiktok.com/@fruit.story739/video/7697687396497902862?is_from_webapp=1&sender_device=pc"
+    "https://www.youtube.com/watch?v=qU3n_ue5o6E"
 ]
 
 result = subprocess.run(

@@ -92,7 +92,7 @@ class Extract(ABC):
         data = json.loads(result.stdout.strip())
 
         if Extract._is_403(result.stderr):
-            raise PermissionError("Request was blocked by site.")
+            raise PermissionError("Request was blocked by site (JSON).")
         
         if not data:
             raise ValueError("gallery-dl returned empty JSON.")
@@ -104,15 +104,19 @@ class Extract(ABC):
         cmd = [
             "gallery-dl",
             "-v",
+            "-o", "output.stdout=utf-8",
             "--cookies-from-browser", "firefox",
             "-D", r"local\temp",
             str(url)
         ]
 
-        result = subprocess.run([*cmd], capture_output=True, text=True, check=False)
+        result = subprocess.run([*cmd], capture_output=True, text=True, encoding="utf-8", check=False)
 
         if Extract._is_403(result.stderr):
-            raise PermissionError("Request was blocked by site.")
+            raise PermissionError("Request was blocked by site (DOWNLOAD).")
+
+        if not result.stdout:
+            raise ValueError("gallery-dl returned empty path")
 
         paths = result.stdout.splitlines()
 
@@ -137,7 +141,7 @@ class Extract(ABC):
         data = json.loads(result.stdout.strip())
 
         if Extract._is_403(result.stderr):
-            raise PermissionError("Request was blocked by site.")
+            raise PermissionError("Request was blocked by site (JSON).")
         
         if not data:
             raise ValueError("yt-dlp returned empty JSON.")
@@ -150,19 +154,29 @@ class Extract(ABC):
             "yt-dlp",
             "-v",
             "-P", r"local\temp",
+            "--encoding", "utf-8",
             "--print", "after_move:filepath",
             "--cookies-from-browser", "firefox",
             str(url)
         ]
 
-        result = subprocess.run([*cmd], capture_output=True, text=True, check=False)
+        result = subprocess.run([*cmd], capture_output=True, text=True, encoding="utf-8", check=False)
 
         if Extract._is_403(result.stderr):
-            raise PermissionError("Request was blocked by site.")
+            raise PermissionError("Request was blocked by site (DOWNLOAD).")
 
-        path = result.stdout.decode()
+        if not result.stdout:
+            raise ValueError("yt-dlp returned empty path")
 
-        return str(path).strip()
+        paths = result.stdout.splitlines()
+
+        for index, path in enumerate(paths):
+            paths[index] = str(path).strip()
+
+        print("YT-DLP STDOUT:", repr(result.stdout))
+        print("YT-DLP EXIT CODE:", result.returncode)
+
+        return paths
 
     def _set_text(self, text):
         pass
@@ -183,6 +197,7 @@ class Extract(ABC):
         self.url = url
         #self.type = self._find_type()
 
+
     def __del__(self):
         for path in self.__downloads:
             if os.path.exists(path):
@@ -191,7 +206,7 @@ class Extract(ABC):
         for path in self.__attachments:
             if os.path.exists(path):
                 os.remove(path)
-
+                
     def process(self):
         self._extract()
         self.__compress()

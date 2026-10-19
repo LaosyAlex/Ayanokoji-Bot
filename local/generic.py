@@ -35,7 +35,7 @@ class Generic(Extract):
     @staticmethod
     def __get_info(data: dict | list) -> tuple[str, str]:
         title = Generic._find_field("title", data) or Generic._find_field("Title", data) or ""
-        desc = Generic._find_field("description", data) or Generic._find_field("Description", data) or ""
+        desc = Generic._find_field("description", data) or Generic._find_field("Description", data) or Generic._find_field("selftext", data) or ""
 
         return title, desc
 
@@ -75,8 +75,20 @@ class Generic(Extract):
 
     #Protected
     def _extract(self):
-        pass
+        __data = Generic.__get_json(self.url)
+        __title, __desc = Generic.__get_info(__data)
+        __text = Generic.__format_text(__title, __desc)
+        self._set_text(__text)
+        print(__text)
+
+        __paths = Generic.__download(self.url) or ""
+        self._append_download(__paths)
+
+        print("PATHS: \n\n")
+        if isinstance(__paths, list):
+            for path in __paths:
+                print(path)
+        else:
+            print(__paths)
 
     #Public
-    def test(self):
-        self.__get_json(self.url)
