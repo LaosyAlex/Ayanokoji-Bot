@@ -5,6 +5,7 @@ import compression
 import utils
 import asyncio
 import subprocess
+import json
 
 class Extract(ABC):
     #private
@@ -49,11 +50,57 @@ class Extract(ABC):
     def _get_type(self):
         self.type
     '''
+    @staticmethod
     def _is_403(stderr: str) -> bool:
         if "403 forbidden" in stderr.lower():
             return True
         else:
             return False
+
+    @staticmethod
+    def _get_json_gallery_dl(url: str) -> dict | list:
+        cmd = [
+            "gallery-dl",
+            "-v",
+            "-j",
+            "--cookies-from-browser", "firefox",
+            str(url)
+        ]
+
+        result = subprocess.run([*cmd], capture_output=True, text= True, check=False)
+
+        data = json.loads(result.stdout.strip())
+
+        if Extract._is_403(result.stderr):
+            raise PermissionError("Request was blocked by site.")
+        
+        if not data:
+            raise ValueError("gallery-dl returned empty JSON.")
+        
+        return data
+
+    @staticmethod
+    def _get_json_yt_dlp(url: str) -> dict | list:
+        cmd = [
+            "yt-dlp",
+            "-v",
+            "-J",
+            "--cookies-from-browser", "firefox",
+            "--ignore-no-formats-error",
+            str(url)
+        ]
+
+        result = subprocess.run([*cmd], capture_output=True, text= True, check=False)
+
+        data = json.loads(result.stdout.strip())
+
+        if Extract._is_403(result.stderr):
+            raise PermissionError("Request was blocked by site.")
+        
+        if not data:
+            raise ValueError("yt-dlp returned empty JSON.")
+        
+        return data
 
     async def _download_video(self, url) -> str: #path
         cmd = [
