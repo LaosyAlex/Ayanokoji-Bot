@@ -4,47 +4,16 @@ import json
 
 class Generic(Extract):
     #Private
-    def __get_json(self, url) -> dict:
+    @staticmethod
+    def __get_json(url: str) -> dict | list | None:
         try:
             try:
-                cmd = [
-                    "gallery-dl",
-                    "-v",
-                    "-j",
-                    "--cookies-from-browser", "firefox",
-                    str(url)
-                ]
-
-                result = subprocess.run([*cmd], capture_output=True, text= True, check=True)
-
-                data = json.loads(result.stdout.strip())
-
-                if not data:
-                    raise ValueError("gallery-dl returned empty JSON")
-                
-                print(f"gallery-dl:\n\n{data}")
+                data = Generic._get_json_gallery_dl(url)
                 return data
             except Exception as e1:
+                print(type(e1).__name__, e1)
                 try:
-                    print(type(e1).__name__, e1)
-
-                    cmd = [
-                        "yt-dlp",
-                        "-v",
-                        "-J",
-                        "--cookies-from-browser", "firefox",
-                        "--ignore-no-formats-error",
-                        str(url)
-                    ]
-
-                    result = subprocess.run([*cmd], capture_output=True, text= True, check=True)
-
-                    data = json.loads(result.stdout.strip())
-
-                    if not data:
-                        raise ValueError("yt-dlp returned empty JSON")
-                    
-                    print(f"yt-dlp:\n\n{data}")
+                    data = Generic._get_json_yt_dlp(url)
                     return data
                 except Exception as e2:
                     raise ExceptionGroup(
@@ -61,8 +30,14 @@ class Generic(Extract):
                 else:
                     print(type(error).__name__, error)
 
-    def __get_info(self, json) -> tuple[str, str]:
-        pass
+            return None
+
+    @staticmethod
+    def __get_info(data: dict | list) -> tuple[str, str]:
+        title = Generic._find_field("title", data) or Generic._find_field("Title", data) or ""
+        desc = Generic._find_field("description", data) or Generic._find_field("Description", data) or ""
+
+        return title, desc
 
     def __download(self, url) -> list[any]:
         pass
