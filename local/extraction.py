@@ -4,22 +4,26 @@ import compression
 import utils
 import subprocess
 import json
+import compress_video
+import compress_image
+import compress_gif
+import compress_text
 
 class Extract(ABC):
     #private
     def __compress(self):
-        compression.text(self.__text)
+        compress_text.compress(self.__text)
 
         for path in self.__downloads:
             format = utils.fileType(path)
 
             match format:
                 case "image":
-                    self.__attachments.append(compression.image(path))
+                    self.__attachments.append(compress_image.compress(path))
                 case "video":
-                    self.__attachments.append(compression.video(path))
+                    self.__attachments.append(compress_video.compress(path))
                 case "gif":
-                    self.__attachments.append(compression.gif(path))
+                    self.__attachments.append(compress_gif.compress(path))
                 case _:
                     print("Unknown file type")
 

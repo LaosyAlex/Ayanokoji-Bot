@@ -1,3 +1,5 @@
+#Need to add/finish error handling
+
 from PIL import Image
 import os
 from utils import MAX_BYTES
