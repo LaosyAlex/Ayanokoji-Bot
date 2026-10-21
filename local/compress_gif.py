@@ -100,7 +100,7 @@ async def __compress_gif(infile):
 
                 
 
-def gif(infile):
+def compress(infile):
     if os.path.getsize(infile) < MAX_BYTES:
         return infile
     else:

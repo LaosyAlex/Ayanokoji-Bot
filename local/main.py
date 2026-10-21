@@ -23,7 +23,8 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if message.author == bot.user:
+    if message.author == bot.user or message.author.id == 1495334750905434283:
+        print("Bot message.")
         return
 
     await bot.process_commands(message)
@@ -31,22 +32,26 @@ async def on_message(message):
     if message.content.startswith('!'):
         return
 
+    print("message detected")
     if "https://" in message.content:
-        link = utils.get_link(message)
+        link = utils.get_link(message.content)
 
         content = Generic(link)
         text, attach = content.process()
-        del content
 
-        files = [discord.file(path) for path in attach]
+        files = [discord.File(path) for path in attach]
 
-        if text.len() > 1:
+        if len(text) > 1:
             for index, value in enumerate(text):
-                if index < text.len():
+                if index < len(text) - 1:
                     await message.reply(value + "...")
                 else:
                     await message.reply(value, files=files)
         else:
-            await message.reply(text, files=files)
+            await message.reply(text[0], files=files)
+
+        del content
+
+        print("Done!")
 
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)

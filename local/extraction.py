@@ -157,7 +157,7 @@ class Extract(ABC):
         return paths
 
     def _set_text(self, text: str) -> None:
-        self.__text = text
+        self.__text.append(text)
 
     def _append_download(self, paths: str | list[str]) -> None:
         if isinstance(paths, str):

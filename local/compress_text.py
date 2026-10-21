@@ -8,7 +8,7 @@ import subprocess
 import json
 import re
 
-def compress(textList):
+def compress(textList: list):
     text = textList[0]
     textList.clear()
 
