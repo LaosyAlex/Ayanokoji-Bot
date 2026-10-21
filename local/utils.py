@@ -28,3 +28,14 @@ def get_link(text: str) -> str:
         text = text[start:end]
 
     return text
+
+gif_domains = {
+    "tenor.com",
+    "giphy.com",
+    "klipy.com",
+    "gifer.com",
+    "gifdb.com",
+    "makeagif.com",
+    "imgur.com",
+    "imgflip.com",
+}
