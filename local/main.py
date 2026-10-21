@@ -5,6 +5,8 @@ from discord.ext import commands
 import logging #No idea of any of the logging stuff btw, add that in the list of thigns to review
 from dotenv import load_dotenv
 import os
+import utils
+from generic import Generic
 
 load_dotenv()
 token = os.getenv("DISCORD_TOKEN")
@@ -28,5 +30,23 @@ async def on_message(message):
 
     if message.content.startswith('!'):
         return
+
+    if "https://" in message.content:
+        link = utils.get_link(message)
+
+        content = Generic(link)
+        text, attach = content.process()
+        del content
+
+        files = [discord.file(path) for path in attach]
+
+        if text.len() > 1:
+            for index, value in enumerate(text):
+                if index < text.len():
+                    await message.reply(value + "...")
+                else:
+                    await message.reply(value, files=files)
+        else:
+            await message.reply(text, files=files)
 
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
