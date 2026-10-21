@@ -6,7 +6,7 @@ __imageTypes = ["jpg", "jpeg", "png", "bmp", "tiff", "tif", "webp", "svg", "ico"
 __gifTypes = ["gif"]
 __videoTypes = ["mp4", "mkv", "mov", "avi", "webm", "flv", "wmv", "m4v", "mpeg", "mpg", "3gp", "ts", "mts", "m2ts"]
 
-def fileType(address):
+def fileType(address: str) -> str:
     format = re.split('\.', address)[1]
 
     if format in __imageTypes:
@@ -18,3 +18,13 @@ def fileType(address):
     else:
         return "unknown"
 
+def get_link(msg: str) -> str:
+    start = text.find("https://")
+    end = text.find(" ", start)
+
+    if start != -1:
+        if end == -1:  
+            end = len(text)
+        text = text[start:end]
+
+    return text
