@@ -32,8 +32,12 @@ async def on_message(message):
     if message.content.startswith('!'):
         return
 
+    if any(domains in message.content for domains in utils.gif_domains) or ".gif" in message.content:
+        print("reaction gif detected.")
+        return
+
     print("message detected")
-    if "https://" in message.content and not any(domains in message.content for domains in utils.gif_domains) and not ".gif" in message.content:
+    if "https://" in message.content:
         link = utils.get_link(message.content)
 
         content = Generic(link)
