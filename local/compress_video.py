@@ -105,7 +105,6 @@ async def __compress_video(infile: str, outfile: str, audio_bitrate: int, video_
 
         _, stderr = await proc.communicate() 
 
-        print(stderr.decode())
     except Exception as error:
         print("Something went wrong while compressing the video.")
         if isinstance(error, subprocess.CalledProcessError):
