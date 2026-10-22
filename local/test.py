@@ -1,3 +1,4 @@
-from compress_video import compress
+from generic import Generic
 
-compress(r"C:\Github\Ayanokoji-Bot\local\temp\【Suicaゲーム】ネットで”人を食べそう”と弄ばれてる『うさぎ』が追ってくるペンギン集めのホラーゲームがヤバすぎる（大絶叫あり） [KOdcGzXx-O4].webm")
+test = Generic("https://www.reddit.com/r/Guitar/comments/1xc250q/one_of_my_songs_that_i_played_at_an_open_mic/")
+test.process()

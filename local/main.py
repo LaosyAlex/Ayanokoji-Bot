@@ -17,6 +17,17 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+@bot.command()
+async def process(ctx):
+    print("Process command called.")
+    replied_message = await ctx.channel.fetch_message(
+        ctx.message.reference.message_id
+    )
+
+    await on_message(replied_message)
+
+    await ctx.message.delete()
+
 @bot.event
 async def on_ready():
     print(f"We are ready to go in, {bot.user.name}")

@@ -59,8 +59,11 @@ class Extract(ABC):
     def _get_json_gallery_dl(url: str) -> dict | list:
         cmd = [
             "gallery-dl",
+            "--sleep-request", "5-7",
+            "--sleep", "2-3",
             "-v",
             "-j",
+            "-o", "browser=chrome",
             "--cookies-from-browser", "firefox",
             str(url)
         ]
@@ -82,13 +85,20 @@ class Extract(ABC):
         cmd = [
             "gallery-dl",
             "-v",
+            "--sleep-request", "5-7",
+            "--sleep", "2-3",
             "-o", "output.stdout=utf-8",
+            "-o", "browser=chrome",
             "--cookies-from-browser", "firefox",
             "-D", r"local\temp",
             str(url)
         ]
 
         result = subprocess.run([*cmd], capture_output=True, text=True, encoding="utf-8", check=False)
+
+        print("Exit code:", result.returncode)
+        print("STDERR:", result.stderr)
+        print("STDOUT:", result.stdout)
 
         if Extract._is_403(result.stderr):
             raise PermissionError("Request was blocked by site (DOWNLOAD).")
@@ -109,8 +119,12 @@ class Extract(ABC):
             "yt-dlp",
             "-v",
             "-J",
+            "--sleep-request", "6",
+            "--sleep-interval", "2",
+            "--max-sleep-interval", "3"
             "--cookies-from-browser", "firefox",
             "--ignore-no-formats-error",
+            "--impersonate", "chrome",
             str(url)
         ]
 
@@ -131,10 +145,14 @@ class Extract(ABC):
         cmd = [
             "yt-dlp",
             "-v",
+            "--sleep-request", "6",
+            "--sleep-interval", "2",
+            "--max-sleep-interval", "3"
             "-P", r"local\temp",
             "--encoding", "utf-8",
             "--print", "after_move:filepath",
             "--cookies-from-browser", "firefox",
+            "--impersonate", "chrome",
             str(url)
         ]
 
@@ -178,6 +196,7 @@ class Extract(ABC):
         self.__text = []
 
     def __del__(self):
+        return
         for path in self.__downloads:
             if os.path.exists(path):
                 os.remove(path)
