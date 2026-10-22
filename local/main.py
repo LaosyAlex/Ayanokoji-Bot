@@ -7,9 +7,12 @@ from dotenv import load_dotenv
 import os
 import utils
 from generic import Generic
+from pathlib import Path
 
 load_dotenv()
 token = os.getenv("DISCORD_TOKEN")
+
+CONFIG_FILE = Path("config.json")
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf=8', mode='w')
 intents = discord.Intents.default()

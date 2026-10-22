@@ -196,7 +196,6 @@ class Extract(ABC):
         self.__text = []
 
     def __del__(self):
-        return
         for path in self.__downloads:
             if os.path.exists(path):
                 os.remove(path)
