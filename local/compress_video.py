@@ -41,8 +41,8 @@ def __video_Compression_Calc(total_bitrate: int, width: int, height: int, FPS: i
             else:
                 new_FPS -= 1
     except Exception as error:
-        print("Something went wrong while calculating video compression.")
-        print(type(error).__name__, error)
+        error.add_note("Video compression calculation failed.")
+        raise
 
 async def __get_video_info(path: str) -> tuple[int, int, int, int]:
     try:
